@@ -18,7 +18,7 @@ export const List = () => {
         <Item
           key={mem.organization.id}
           id={mem.organization.id}
-          name={mem.organization.neme}
+          name={mem.organization.name}
           imageUrl={mem.organization.imageUrl}
         />
       ))}
