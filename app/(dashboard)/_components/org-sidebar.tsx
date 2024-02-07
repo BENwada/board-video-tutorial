@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 
 import Image from "next/image";
 import { cn } from "@/lib/utils";
+import { useSearchParams } from "next/navigation";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -15,6 +16,9 @@ const font = Poppins({
 });
 
 const OrgSidebar = () => {
+  const searchParams = useSearchParams();
+  const favorites = searchParams.get("favorites");
+
   return (
     <div className="hidden lg:flex flex-col space-y-6 w-[206px] pl-5 pt-5">
       <Link href="/">
@@ -47,7 +51,7 @@ const OrgSidebar = () => {
       />
       <div className="space-y-1 w-full">
         <Button
-          variant="ghost"
+          variant={favorites ? "ghost" : "secondary"}
           asChild
           size="lg"
           className="font-normal justify-start px-2 w-full"
@@ -58,7 +62,7 @@ const OrgSidebar = () => {
           </Link>
         </Button>
         <Button
-          variant="ghost"
+          variant={favorites ? "secondary" : "ghost"}
           asChild
           size="lg"
           className="font-normal justify-start px-2 w-full"
