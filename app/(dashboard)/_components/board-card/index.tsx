@@ -1,11 +1,11 @@
 "use client";
 
+import { toast } from "sonner";
 import Link from "next/link";
 import Image from "next/image";
 import { useAuth } from "@clerk/nextjs";
 import { MoreHorizontal } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";
-import { toast } from "sonner";
 
 import { Skeleton } from "@/components/ui/skeleton";
 import { Actions } from "@/components/actions";
