@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "clsx",
     "favorited",
     "liveblock",
     "liveblocks",
@@ -7,6 +8,7 @@
     "nextjs",
     "sonner",
     "tailwindcss",
-    "usehooks"
+    "usehooks",
+    "XYWH"
   ]
 }
