@@ -94,7 +94,7 @@ export type CanvasState =
   | { mode: CanvasMode.SelectionNet; origin: Point; current?: Point }
   | {
       mode: CanvasMode.Inserting;
-      LayerType:
+      layerType:
         | LayerType.Ellipse
         | LayerType.Rectangle
         | LayerType.Text
