@@ -25,6 +25,7 @@ import { Info } from "./info";
 import { Participants } from "./participants";
 import { Toolbar } from "./toolbar";
 import { CursorsPresence } from "./cursors-presence";
+import { LayerPreview } from "./layer-preview";
 
 const MAX_LAYERS = 100;
 
@@ -142,6 +143,14 @@ export const Canvas = ({ boardId }: CanvasProps) => {
         onPointerUp={onPointerUp}
       >
         <g style={{ transform: `translate(${camera.x}px, ${camera.y}px)` }}>
+          {layerIds.map((layerId) => (
+            <LayerPreview
+              key={layerId}
+              id={layerId}
+              onLayerPointerDown={() => {}}
+              selectionColor="#000"
+            />
+          ))}
           <CursorsPresence />
         </g>
       </svg>
